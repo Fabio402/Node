@@ -1,0 +1,34 @@
+<!Doctype html>
+<html>
+    <head>
+        {{#pageTitle}}
+            <title>{{pageTitle}}</title>
+        {{/pageTitle}}
+        {{^pageTitle}}
+            <title>{{h.defaultPageTitle}}</title>{{!uso do helper para definir um titulo caso não seja passado nenhum}}
+        {{/pageTitle}}
+    </head>
+
+    <body>
+        <h1>Pagina {{pagina}} {{teste}}</h1>
+        <ul>
+            {{#h.menu}}
+                <li><a href="{{slug}}">{{name}}</a></li>
+            {{/h.menu}}
+        </ul>
+        <hr/>
+        {{#flashes}}
+            {{#success}}
+            <div>{{.}}</div>
+            {{/success}}
+            {{#error}}
+                <div>{{.}}</div>
+            {{/error}}
+            {{#info}}
+                <div>{{.}}</div>
+            {{/info}}
+        {{/flashes}}
+
+
+
+</html>

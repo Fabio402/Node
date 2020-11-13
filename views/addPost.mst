@@ -1,0 +1,23 @@
+{{> header}}
+<hr/>
+<h2>Novo Post</h2>
+
+<form method='POST'>
+    <label>
+        Titulo: 
+        <input type='text' name='title' required/>
+    </label>
+    <br/>
+    <label>
+        Corpo: 
+        <textarea type='text' name='body'></textarea>
+    </label>
+    <br/>
+    <label>
+        Tags: 
+    </label>
+    <br/>
+    <label> 
+        <input type='submit' value='Salvar'/>
+    </label>
+</form>
